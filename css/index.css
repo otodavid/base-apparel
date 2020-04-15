@@ -159,17 +159,19 @@ form {
 /* Mobile View */
 @media screen and (min-width: 320px) and (max-width: 480px) {
     .container {
-        /* set the template to 2 rows and 1 column */
-        grid-template: .3fr 1fr 2fr / 1fr;
+        /* set the template to 3 rows and 1 column */
+        grid-template: 70px 1fr 2fr / 1fr;
         background: none;
     }
 
     nav {
+        /* base apparel logo comes first */
         grid-row: 1/2;
         margin: 7% 10%;
     }
 
     .apparel-image {
+        /* the image comes second */
         grid-column: 1/2;
         grid-row: 2/3;
         background:  url(../images/hero-mobile.jpg) top left / 100% no-repeat;
