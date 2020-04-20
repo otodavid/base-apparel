@@ -2,10 +2,12 @@ const app = () => {
     const form = document.getElementById("form");
     const email = document.getElementById("email");
 
-    form.addEventListener("submit", (e) => {
+    const validateForm = (e) => {
         e.preventDefault();
         checkInputs();
-    });
+    }
+
+    form.addEventListener("submit", validateForm);
 
     const checkInputs = () => {
         const emailValue = email.value.trim();

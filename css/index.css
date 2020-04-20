@@ -18,11 +18,16 @@ body {
 nav {
     /* occupy the 1st row and 1st column */
     grid-column: 1/2;
-    width: 20%;
+    width: 30%;
     margin: 5% 20%;
 }
 
-nav > img {
+nav a  {
+    display: block;
+    width: 100%;
+}
+
+nav img {
     width: 100%;
 }
 
@@ -32,6 +37,7 @@ article {
     grid-row: 2/3;
     margin: 5% 20%;
     width: 50%;
+    padding-bottom: 9.8%;
 }
 
 h1 {
@@ -67,6 +73,7 @@ form {
     outline: none;
     border: 1px solid hsla(0, 36%, 70%, 0.507);
     padding-right: 33%;
+    background-color: hsl(0, 100%, 98%);
 }
 
 #email::placeholder {
@@ -125,14 +132,8 @@ form {
     /* occupy the whole second column */
     grid-column: 2/4;
     grid-row: 1/3;
-    min-height: 100vh;
-    overflow: hidden;
-    background:  url(../images/hero-desktop.jpg) 0% / 100% 100% no-repeat;
-}
-
-.apparel-image > img {
-    width: 100%;
-    height: 100%;
+    padding: 50%;
+    background:  url(../images/hero-desktop.jpg) top left / 100% 100% no-repeat;
 }
 
 .attribution {
@@ -160,7 +161,7 @@ form {
 @media screen and (min-width: 320px) and (max-width: 480px) {
     .container {
         /* set the template to 3 rows and 1 column */
-        grid-template: 55px 1fr 2fr / 1fr;
+        grid-template: 55px 250px 1fr / 1fr;
         background: none;
     }
 
@@ -170,12 +171,15 @@ form {
         margin: 4% 10%;
     }
 
+    nav img {
+        width: 80%;
+    }
+
     .apparel-image {
         /* the image comes second */
         grid-column: 1/2;
         grid-row: 2/3;
-        background:  url(../images/hero-mobile.jpg) top left / 100% no-repeat;
-        min-height: 30.5vh;
+        background:  url(../images/hero-mobile.jpg) top left / contain no-repeat;
     }
 
     article {
@@ -189,6 +193,15 @@ form {
 
     h1 {
         font-size: 2.5em;
+        letter-spacing: 5px;
+    }
+
+    #email {
+        border-radius: 50px;
+    }
+
+    #submit {
+        border-radius: 50px;
     }
 
     .attribution {
@@ -196,4 +209,72 @@ form {
         padding: 5%;
     }
 
+}
+
+/* TABLET VIEW */
+@media screen and (min-width: 481px) and (max-width: 769px) {
+    .container {
+        /* set the template to 3 rows and 1 column */
+        grid-template: 100px 510px 1fr / 1fr;
+        background: none;
+    }
+
+    nav {
+        /* base apparel logo comes first */
+        grid-row: 1/2;
+        margin: 4% 10%;
+    }
+
+    nav img {
+        width: 80%;
+    }
+
+    .apparel-image {
+        /* the image comes second */
+        grid-column: 1/2;
+        grid-row: 2/3;
+        background:  url(../images/hero-mobile.jpg) top left / contain no-repeat;  
+    }
+
+    article {
+        grid-row: 3/4;
+        margin: 0;
+        padding: 10% 13%;
+        text-align: center;
+        width: 100%;
+        background-color:hsl(0, 100%, 98%);
+    }
+
+    .greeting {
+        font-size: 1.5em;
+        line-height: 35px;
+    }
+
+    #email {
+        padding: 3%;
+        font-size: 1.7em;
+        border-radius: 50px;
+    }
+
+    #submit {
+        border-radius: 50px;
+        width: 17%;
+        right: -1%;
+    }
+
+    .attribution {
+        font-size: .7em;
+        padding: 5%;
+    }
+}
+
+/* SMALL LAPTOS */
+@media screen and (min-width: 770px) and (max-width: 1025px) {
+    .container {
+        grid-template: 12vh 1fr / 53% 47%;
+    }
+
+    nav {
+    margin: 7% 20%;
+    }
 }
