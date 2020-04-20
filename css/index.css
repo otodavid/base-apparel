@@ -31,7 +31,7 @@ nav img {
     width: 60%;
 }
 
-article {
+section {
     /* occupy the 2nd row and 1st column */
     grid-column: 1/2;
     grid-row: 2/3;
@@ -191,7 +191,7 @@ form {
         background:  url(../images/hero-mobile.jpg) top left / contain no-repeat;
     }
 
-    article {
+    section {
         grid-row: 3/4;
         margin: 0;
         padding: 15% 10%;
@@ -245,7 +245,7 @@ form {
         background:  url(../images/hero-mobile.jpg) top left / contain no-repeat;  
     }
 
-    article {
+    section {
         grid-row: 3/4;
         margin: 0;
         padding: 10% 13%;
