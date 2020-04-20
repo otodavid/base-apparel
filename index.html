@@ -1,55 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap">
   <link rel="stylesheet" href="css/index.css">
-  
+
   <title>Base Apparel | Coming Soon</title>
 </head>
 
 <body>
   <div class="container">
     <nav>
-      <a href="#">
-      <img src="images/logo.svg" alt="base-apparel-logo">
+      <a href="index.html">
+        <img src="images/logo.svg" alt="base-apparel-logo">
       </a>
     </nav>
 
     <article>
-      <header>
-        <h1>We're coming soon</h1>
-      </header>
       <section>
+        <header>
+          <h1>We're coming soon</h1>
+        </header>
+
         <p class="greeting">
-            Hello fellow shoppers! We're currently building our new fashion store. 
-            Add your email below to stay up-to-date with announcements and our launch deals.
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our launch deals.
         </p>
-        <form action="" class="form" id="form" novalidate>
+        <form action="index.html" id="form" method="POST" novalidate>
           <div class="form-control">
-              <input type="email" name="email" id="email" placeholder="Email Address">
-              <object data="images/icon-error.svg" type="image/svg+xml">Your browser does not support the use of SVGS.</object>
-              <small>Error Message</small>
+            <input type="email" name="email" id="email" placeholder="Email Address" aria-label="email">
+            <object data="images/icon-error.svg" type="image/svg+xml">Your browser does not support the use of
+              SVGS.</object>
+            <small>Error Message</small>
           </div>
-          <button type="submit" id="submit"><img src="images/icon-arrow.svg" alt=""></button>
+          <button type="submit" id="submit"><img src="images/icon-arrow.svg" alt="submit button"
+              aria-label="submit"></button>
         </form>
       </section>
     </article>
 
-    <section class="apparel-image">
-    </section>
+    <div class="apparel-image">
+    </div>
   </div>
-  
+
   <footer>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="https://www.frontendmentor.io/profile/tomi-david" target="_blank">Ojo Oloruntomi</a>.
     </p>
   </footer>
 
   <script src="js/index.js"></script>
 </body>
+
 </html>
